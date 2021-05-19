@@ -1,6 +1,6 @@
 let addTimer;
 
-let timer = 1
+let timer = 10
 
 let miliSecond = 1
 let second = 0
