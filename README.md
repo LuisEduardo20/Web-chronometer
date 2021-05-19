@@ -14,5 +14,5 @@ Cronômetro construído com html, css e javascript a fins de estudo.
 
 ### Demonstação:
 
-![Cronômetro]{https://github.com/LuisEduardo20/Web-chronometer/blob/master/assets/ezgif.com-gif-maker.gif?raw=true}
+![Cronômetro](https://github.com/LuisEduardo20/Web-chronometer/blob/master/assets/ezgif.com-gif-maker.gif?raw=true)
 
