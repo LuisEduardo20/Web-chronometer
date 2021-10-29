@@ -45,34 +45,37 @@ function addSecond() {
 }
 
 function addMiliSecond() {
-  if(miliSegundo <= 59) {
-    miliSegundo++
-    if(miliSegundo < 10)
-      document.getElementById('mili-segundo').innerText = `0${miliSegundo}`;
-    else
+  miliSegundo++
+  if(miliSegundo < 10) {
+    // if(miliSegundo < 10)
+      // document.getElementById('mili-segundo').innerText = `0${miliSegundo}`;
       document.getElementById('mili-segundo').innerText = miliSegundo;
+    // else
   }
   else {
     addSecond();
     miliSegundo = 0;
-    document.getElementById('mili-segundo').innerText = '00';
+    document.getElementById('mili-segundo').innerText = miliSegundo;
   }
 }
 
+// Start
 document.getElementById('start').addEventListener('click', e => {
   if(!cronometroEmExecucao) {
     e.preventDefault();
     cronometroEmExecucao = true;
-    myTimer = setInterval(addMiliSecond, 15);
+    myTimer = setInterval(addMiliSecond, 100);
   }
 });
 
+// Pause
 document.getElementById('pause').addEventListener('click', e => {
   e.preventDefault();
   clearInterval(myTimer);
   cronometroEmExecucao = false;
 });
 
+// Reset
 document.getElementById('reset').addEventListener('click', e => {
   e.preventDefault();
 
@@ -84,7 +87,7 @@ document.getElementById('reset').addEventListener('click', e => {
   segundo = 0;
   miliSegundo = 0;
 
-  document.getElementById('mili-segundo').innerText = '00';
+  document.getElementById('mili-segundo').innerText = miliSegundo;
   document.getElementById('segundo').innerText = '00';
   document.getElementById('minuto').innerText = '00';
   document.getElementById('hora').innerText = '00';
