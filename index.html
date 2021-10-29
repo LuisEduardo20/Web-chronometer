@@ -3,120 +3,49 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Calculadorat</title>
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<style>
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  .container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  background-image: url('https://images.unsplash.com/photo-1514021704597-5fa077fbd6d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.container2 {
-  width: 750px;
-  height: 750px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-color: rgba(126, 168, 254, 0.8);
-  border-radius: 50%;
-}
-
-.buttons {
-  display: flex;
-}
-
-#start {
-  width: 150px;
-  height: 50px;
-  margin: 20px;
-  border-radius: 20px;
-  background-color: aquamarine;
-}
-#start:hover {
-  transition: 0.5s;
-  background-color: rgb(108, 204, 237);
-}
-
-#reset {
-  width: 150px;
-  height: 50px;
-  margin: 20px;
-  border-radius: 20px;
-  background-color: rgb(255, 66, 66);
-}
-#reset:hover {
-  transition: 0.5s;
-  background-color: rgb(210, 104, 245);
-}
-
-#stop {
-  width: 150px;
-  height: 50px;
-  margin: 20px;
-  border-radius: 20px;
-  background-color: rgb(245, 228, 154);
-}
-#stop:hover {
-  transition: 0.5s;
-  background-color: rgb(255, 150, 112);
-}
-
-.cronometro {
-  color: black;
-
-}
-
-p a {
-  font-size: 8rem;
-}
-
-</style>
-
 <body>
-
-  <div class="container">
-
-    <div class="container2">
-
-      <h1>Cronômetro 2021</h1>
-      <p>
-        <a id="hour">00</a>
-        <a>:</a>
-        <a id="minute">00</a>
-        <a>:</a>
-        <a id="second">00</a>
-        <a>:</a>
-        <a id="miliSecond">00</a>
-      </p>
-
-      <div class="buttons">
-        <input id="start" type="button" value="Start" onclick="comeca()">
-        <input id="stop" type="button" value="Stop" onclick="pause()">
-        <input id="reset" type="button" value="Restart" onclick="restart()">
-      </div>
-
+  
+  <main>
+    <div class="titulo">
+      <h1>Cronômetro Web</h1>
     </div>
-
-  </div>
-
+    
+    <div class="conteudo">
+      <div class="calculadora">
+        
+        <div id="timer">
+          <p id="hora" class="timer">00</p>
+          <p>:</p>
+          <p id="minuto" class="timer">00</p>
+          <p>:</p>
+          <p id="segundo" class="timer">00</p>
+          <p>:</p>
+          <p id="mili-segundo" class="timer">00</p>
+        </div>
+        
+        <div class="buttons">
+          <button id="start">start</button>
+          <button id="pause">pause</button>
+          <button id="reset">restart</button>
+        </div>
+        
+      </div>
+    </div>
+    
+    <footer>
+      <p>Criado por <a href="https://www.linkedin.com/in/luis-eduardo-santos-costa-5369841b3/" target="_blank">Luis Eduardo</a> - 2021</p>
+    </footer>
+  </main>
+  
 </body>
 
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="./script/index.js"></script>
 
 </html>
