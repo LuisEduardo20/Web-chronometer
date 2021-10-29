@@ -1,5 +1,5 @@
 let cronometroEmExecucao = false;
-let myTimer = null;
+let myTimer = null; // vai armazenar o setInterval
 
 let hora = 0;
 let minuto = 0;
@@ -8,42 +8,54 @@ let miliSegundo = 0;
 
 function addHour() {
   hora++;
-  document.getElementById('hora').innerText = hora;
+  if(hora < 10)
+    document.getElementById('hora').innerText = `0${hora}`;
+  else
+    document.getElementById('hora').innerText = hora;
 }
 
 function addMinute() {
   if(minuto <= 59) {
     minuto++;
-    document.getElementById('minuto').innerText = minuto;
+    if(minuto < 10)
+      document.getElementById('minuto').innerText = `0${minuto}`;
+    else
+      document.getElementById('minuto').innerText = minuto;
   }
   else {
     addHora();
     minuto = 0;
-    document.getElementById('minuto').innerText = minuto;
+    document.getElementById('minuto').innerText = '00';
   }
 }
 
 function addSecond() {
   if(segundo < 59) {
     segundo++;
-    document.getElementById('segundo').innerText = segundo;
+    if(segundo < 10)
+      document.getElementById('segundo').innerText = `0${segundo}`;
+    else
+      document.getElementById('segundo').innerText = segundo;
   }
   else {
     addMinute();
     segundo = 0;
-    document.getElementById('segundo').innerText = segundo;
+    document.getElementById('segundo').innerText = '00';
   }
 }
 
 function addMiliSecond() {
   if(miliSegundo <= 59) {
     miliSegundo++
-    document.getElementById('mili-segundo').innerText = miliSegundo;
+    if(miliSegundo < 10)
+      document.getElementById('mili-segundo').innerText = `0${miliSegundo}`;
+    else
+      document.getElementById('mili-segundo').innerText = miliSegundo;
   }
   else {
     addSecond();
     miliSegundo = 0;
-    document.getElementById('mili-segundo').innerText = miliSegundo;
+    document.getElementById('mili-segundo').innerText = '00';
   }
 }
 
